@@ -277,22 +277,15 @@ body {font-family: "Lato", sans-serif}
             function changeColorAndJump() {
                 // Generate a random color
                 const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
-    
-                // Set the text color to the random color
                 contactText.style.color = randomColor;
-    
-                // Add or remove the "jump" class to restart the jump animation
                 contactText.classList.toggle('jump');
     
-                // Request the next frame to continue the animation
                 requestAnimationFrame(changeColorAndJump);
             }
-    
-            // Start the animation loop
+               
             changeColorAndJump();
         }
     
-        // Call the function to start the animation
         animateColorAndJump();
     </script>
     
